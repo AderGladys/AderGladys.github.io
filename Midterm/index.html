@@ -13,7 +13,7 @@
 
                 this.el.addEventListener('click', function (e) {
 		
-                    let cat = document.querySelector('#bengal cat-model')
+                    let cat = document.querySelector('#bengal_cat-model')
 		    cat.setAttribute('animation-mixer', "clip: Scene; loop: once;");
                     this.audio.play();
 			
@@ -36,7 +36,7 @@
                 }.bind(this));
                 this.el.addEventListener('touchstart', function (e) {
 		
-                    let cat = document.querySelector('#bengal cat-model')
+                    let cat = document.querySelector('#bengal_cat-model')
 		    cat.setAttribute('animation-mixer', "clip: Scene; loop: once;");
                     this.audio.play();
 			console.log(e)
@@ -49,7 +49,7 @@
 		
                 this.el.addEventListener('animation-finished', function (e) {
 			 console.log(e)
-                    let cat = document.querySelector('#bengal cat-model')
+                    let cat = document.querySelector('#bengal_cat-model')
 		    cat.removeAttribute('animation-mixer');
                 }.bind(this));
 		
@@ -62,11 +62,11 @@
   <body style="margin: 0; overflow: hidden;">
     <a-scene renderer="colorManagement: true">
        <a-assets>
-        <a-asset-item id="bengal cat" response-type="arraybuffer" src="./bengal cat.glb"></a-asset-item>
-        <audio id="meow" src="./assets/Meow.mp3"></audio>
+        <a-asset-item id="bengal_cat" response-type="arraybuffer" src="./bengal_cat.glb"></a-asset-item>
+        <audio id="meow" src="./Meow.mp3"></audio>
       </a-assets>
-      <a-entity event-listener id="bengal cat-model"  
-        gltf-model="#bengal cat" 
+      <a-entity event-listener id="bengal_cat-model"  
+        gltf-model="#bengal_cat" 
         scale=".5 .5 .5" 
         position = "0 0 -5" 
         rotation="0 0 0" 
