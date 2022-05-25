@@ -9,12 +9,12 @@
     window.onload = function() {
         AFRAME.registerComponent('event-listener', {
             init: function () {
-                this.audio = document.querySelector("#Yeayyy");
+                this.audio = document.querySelector("#Meow");
 
                 this.el.addEventListener('click', function (e) {
 		
-                    let dragon = document.querySelector('#little witch academia-model')
-		    dragon.setAttribute('animation-mixer', "clip: Scene; loop: once;");
+                    let cat = document.querySelector('#bengal cat-model')
+		    cat.setAttribute('animation-mixer', "clip: Scene; loop: once;");
                     this.audio.play();
 			
                   console.log(e)
@@ -36,8 +36,8 @@
                 }.bind(this));
                 this.el.addEventListener('touchstart', function (e) {
 		
-                    let dragon = document.querySelector('#little witch academia-model')
-		    dragon.setAttribute('animation-mixer', "clip: Scene; loop: once;");
+                    let cat = document.querySelector('#bengal cat-model')
+		    cat.setAttribute('animation-mixer', "clip: Scene; loop: once;");
                     this.audio.play();
 			console.log(e)
                 }.bind(this));
@@ -49,8 +49,8 @@
 		
                 this.el.addEventListener('animation-finished', function (e) {
 			 console.log(e)
-                    let dragon = document.querySelector('#little witch academia-model')
-		    dragon.removeAttribute('animation-mixer');
+                    let cat = document.querySelector('#bengal cat-model')
+		    cat.removeAttribute('animation-mixer');
                 }.bind(this));
 		
             }
@@ -62,17 +62,17 @@
   <body style="margin: 0; overflow: hidden;">
     <a-scene renderer="colorManagement: true">
        <a-assets>
-        <a-asset-item id="little wicth academia" response-type="arraybuffer" src="./little witch academia.glb"></a-asset-item>
-        <audio id="Yeayyy" src="./assets/Yeayyy.wav"></audio>
+        <a-asset-item id="bengal cat" response-type="arraybuffer" src="./bengal cat.glb"></a-asset-item>
+        <audio id="meow" src="./assets/meow.wav"></audio>
       </a-assets>
-      <a-entity event-listener id="little witch academia-model"  
-        gltf-model="#little witch academia" 
+      <a-entity event-listener id="bengal cat-model"  
+        gltf-model="#bengal cat" 
         scale=".5 .5 .5" 
         position = "0 0 -5" 
         rotation="0 0 0" 
       >
       </a-entity>
-      <a-sound src="#Yeayyy" autoplay="false"></a-sound>
+      <a-sound src="#meow" autoplay="false"></a-sound>
       <a-entity cursor="rayOrigin:mouse"></a-entity>
       <a-entity cursor="fuse: true; fuseTimeout: 500"></a-entity>
     </a-scene>
